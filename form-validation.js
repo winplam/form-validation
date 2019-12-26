@@ -70,6 +70,7 @@ function checkForm(event) {
     }
   })
   if (valid) {
+    submitFlag = false
     alert('Hi Five! You completed the form with all valid input.')
   } else {
     event.preventDefault()
