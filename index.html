@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Instant JavaScript<br/>Form Validation</h1>
+<form novalidate>
+    <!-- Email -->
+    <label for="e-mail">Email address:</label>
+    <span class="error"></span>
+    <input type="email" id="e-mail" name="mail" required>
+    <!-- Email confirmation -->
+    <label for="e-mail-confirmation">Email confirmation:</label>
+    <span class="error"></span>
+    <input type="email" id="e-mail-confirmation" name="mail-confirm" required>
+    <!-- Country -->
+    <label for="country-text">Country:</label>
+    <span class="error"></span>
+    <input type="text" id="country-text" name="country" list="country-list" placeholder="[A-Za-z]+" required
+           pattern="[A-Za-z]+">
+    <datalist id="country-list">
+        <option>Argentina</option>
+        <option>Australia</option>
+        <option>Brazil</option>
+        <option>Canada</option>
+        <option>China</option>
+        <option>India</option>
+        <option>Kazakhstan</option>
+        <option>Russia</option>
+        <option>United States</option>
+    </datalist>
+    <!-- Zip Code -->
+    <label for="zip-code">Zip Code:</label>
+    <span class="error"></span>
+    <input type="number" id="zip-code" name="zip" min="0" max="99999" step="1" required
+           pattern="^\d{5}(?:[-\s]\d{4})?$">
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <span class="error"></span>
+    <input type="password" id="password" name="pwd" minlength="1" maxlength="12" required>
+    <!-- Password Confirmation -->
+    <label for="password-confirmation">Password Confirmation:</label>
+    <span class="error"></span>
+    <input type="password" id="password-confirmation" name="pwd-confirm" minlength="1" maxlength="12" required>
+    <input type="submit">
+</form>
+<script type="text/javascript" src="form-validation.js"></script>
+</body>
+</html>
